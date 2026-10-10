@@ -15,4 +15,16 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @org.junit.jupiter.api.Test
+    void findMaxWhenMaximumIsAtTheEnd() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {1, 2, 3};
+        long expected = 3;
+
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
